@@ -1,0 +1,7 @@
+{
+  "name": "tarjeta-usuario",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

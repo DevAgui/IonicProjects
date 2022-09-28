@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tarjetero
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">User cards</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-item>
+    <ion-text>{{name}}</ion-text>
+    <ion-label position="floating">Introduce your name</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-button id="send" expand="full" (click)="addUser(name)">Send</ion-button>
+
+  <ion-card *ngFor="let p of people">
+    <ion-card-header>
+      <ion-card-title>{{p.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="full" (click)="removeUser(p.id)">Delete</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
